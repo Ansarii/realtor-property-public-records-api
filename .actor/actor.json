@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "realestate-intel-mcp",
+  "title": "Realtor Property & Public Records API (Unofficial)",
+  "description": "Extract Realtor.com Next.js property specs, county tax assessments, multi-year tax history, price cuts, and GreatSchools ratings via API and MCP.",
+  "seoTitle": "Realtor Property & Public Records API (Unofficial)",
+  "seoDescription": "Extract Realtor.com Next.js property specs, county tax assessments, multi-year tax history, price cuts, and GreatSchools ratings via API and MCP.",
+  "version": "0.0",
+  "usesStandbyMode": true,
+  "webServerMcpPath": "/mcp",
+  "standbyPort": 8080,
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json"
+}

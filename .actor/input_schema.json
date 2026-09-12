@@ -1,0 +1,38 @@
+{
+  "title": "Real Estate Intelligence MCP Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "realtorUrls": {
+      "title": "Realtor.com Listing URLs",
+      "type": "array",
+      "description": "Optional list of Realtor.com property detail URLs to process in batch mode.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.realtor.com/realestateandhomes-detail/123-Main-St_Austin_TX_78701_M12345-67890"
+      ]
+    },
+    "idealistaUrls": {
+      "title": "Idealista Listing URLs",
+      "type": "array",
+      "description": "Optional list of Idealista (Spain, Italy, Portugal) property URLs to process in batch mode.",
+      "editor": "stringList"
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy group configuration. Apify Residential Proxy recommended for Kasada and DataDome targets.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+      }
+    },
+    "maxChargeUsd": {
+      "title": "Maximum Charge (USD)",
+      "type": "integer",
+      "description": "Maximum spending limit in USD for Pay-Per-Event billing (enforces ACTOR_MAX_TOTAL_CHARGE_USD).",
+      "default": 10
+    }
+  }
+}

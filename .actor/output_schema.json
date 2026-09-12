@@ -1,0 +1,25 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Real Estate Intelligence MCP Live Endpoints",
+  "type": "object",
+  "properties": {
+    "mcpEndpoint": {
+      "title": "Streamable HTTP MCP Endpoint",
+      "type": "string",
+      "description": "Streamable HTTP MCP endpoint for Claude Desktop, Cursor, Windsurf, or autonomous AI agents.",
+      "template": "{{links.containerRunUrl}}/mcp"
+    },
+    "sseEndpoint": {
+      "title": "Server-Sent Events (SSE) Endpoint",
+      "type": "string",
+      "description": "SSE transport endpoint for MCP clients.",
+      "template": "{{links.containerRunUrl}}/sse"
+    },
+    "discoveryUrl": {
+      "title": "MCP Discovery Manifest",
+      "type": "string",
+      "description": "Public MCP discovery and server-card URL.",
+      "template": "{{links.containerRunUrl}}/.well-known/mcp/server-card.json"
+    }
+  }
+}
